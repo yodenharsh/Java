@@ -12,7 +12,6 @@ class Detail //superclass
         telno = t1;
         rent = r1;
     }
- 
     void show()
     {
         System.out.println("Name of customer = "+name);
@@ -20,20 +19,17 @@ class Detail //superclass
         System.out.println("Telephone Number = "+telno);
         System.out.println("Monthly Rental = "+rent);
     }
-} //end of superclass Detail
- 
+}
 class Bill extends Detail //subclass
 {
     int n;
     double amt;
- 
     Bill(String n1, String a1, long t1, double r1, int c)
     {
-        super(n1,a1,t1,r1); //initializing data members of superclass by calling its constructor
+        super(n1,a1,t1,r1); //initializing data members of superclass through constructor
         n = c;
         amt = 0.0;
     }
- 
     void cal()
     {
         if(n>=1 && n<=100)
@@ -45,15 +41,13 @@ class Bill extends Detail //subclass
         else
             amt = 1*n + rent;
     }
- 
     void show()
     {
         super.show(); //calling the superclass function show()
         System.out.println("No. of calls = "+n);
         System.out.println("Amount to be paid = Rs. "+amt);
     }
-} //end of subclass Bill
- 
+}
 public class Inheritance_prog //Class which will contain the main() method and execute the program
 {
     public static void main(String args[])
@@ -69,10 +63,9 @@ public class Inheritance_prog //Class which will contain the main() method and e
         double r1 = sc.nextDouble();
         System.out.print("Enter the number of calls : ");
         int c = sc.nextInt();
- 
         Bill ob = new Bill(n1,a1,t1,r1,c); //creating object of subclass
         System.out.println("*** Output ***");
         ob.cal();
-        ob.show(); //calling show() function of subclass
+        ob.show();
     }
 }
