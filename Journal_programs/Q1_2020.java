@@ -1,3 +1,6 @@
+package Journal_programs;
+
+
 import java.util.Scanner;
 public class Q1_2020
 {
