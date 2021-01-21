@@ -30,7 +30,7 @@ public class magicNumber
             System.out.println(n+" is not a Magic Number.");
         }
     }
-    public static void main()
+    public static void main(String args[])
     {
         magicNumber obj=new magicNumber();
         obj.input();

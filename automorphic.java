@@ -3,12 +3,21 @@ import java.util.*;
 public class automorphic
 {
     int num;int digit=0;
+
+    public static void main(String args[])
+    {
+        automorphic obj=new automorphic();
+        obj.input();
+        obj.calculate();
+    }
+
     void input()
     {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter a number");
         num=sc.nextInt();
     }
+
     void calculate()
     {
         int square=num*num;int temp=num;
@@ -27,11 +36,5 @@ public class automorphic
         }
         else
         System.out.println("not automorphic number");
-    }
-    public static void main()
-    {
-        automorphic obj=new automorphic();
-        obj.input();
-        obj.calculate();
     }
 }

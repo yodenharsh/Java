@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Alphabetical_Order
 {
-    public static void main() 
+    public static void main(String args[])
     {
         int n;
         String temp;

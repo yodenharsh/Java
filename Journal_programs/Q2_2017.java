@@ -43,7 +43,7 @@ class Q2_2017
             S[i] = 0;
             for(int j=0; j<5; j++)
             {
-                if(A[i][j] == K[j]) // Checking if Answer of the participants match with the key or not
+                if(A[i][j] == K[j]) // Checking if answer of the participants match with the key or not
                                                                                                 
                 {
                     S[i]++;

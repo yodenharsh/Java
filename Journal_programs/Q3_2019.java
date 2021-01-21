@@ -1,6 +1,6 @@
 package Journal_programs;
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 public class Q3_2019
 {
     String fo="IO";
@@ -22,7 +22,7 @@ public class Q3_2019
         else
             System.out.println("Program will now terminate");
     }   
-    
+
     static boolean validity(String str)
     {
         char last=str.charAt(str.length()-1);boolean uppercase=true;
@@ -31,7 +31,7 @@ public class Q3_2019
             if(Character.isLowerCase(str.charAt(i)))
             {
                 uppercase=false;break;
-        }
+            }
         }
         if(last!='?' && last!='!' && last!='.')
         {
@@ -44,45 +44,32 @@ public class Q3_2019
             return false;
         }
         else
-        return true;
+            return true;
     }
+
     static String generate(String str)
     {
         str=str.substring(0,str.length()-1);
         int ei=-1;//end index of concurring letters from end
-        String result="";String add=" ";
-        for(int i=str.length()-1;i>=0;i--)
+        StringTokenizer st=new StringTokenizer(str);String result=" ";
+        while(st.hasMoreTokens())
         {
-            if(str.charAt(str.length()-2)==str.charAt(i))
+            String word=st.nextToken();
+            char lastChar=word.charAt(word.length()-1);ei=-1;
+            for(int i=word.length()-1;i>=0;i--)
             {
+                if(word.charAt(i)==lastChar)
                 ei=i;
+                else
+                break;
             }
-            
-            else
-            break;
-        }    
-        ei=ei-1;
-        if(ei<0)
-        {
-            for(int i=str.length()-2;i>=0;i--)
-            {
-            add=add+str.charAt(i);   
+            StringBuffer sb=new StringBuffer(word.substring(0,ei));
+            sb.reverse();
+            word=word.concat(String.valueOf(sb));
+            result+=" " + word;
         }
-        add=add.trim();
-        result=str.substring(0,str.length()-1)+String.valueOf(str.charAt(str.length()-1))+add;  
+            return result;
     }
-    else if(ei!=-1)
-    {
-        for(int i=str.length()-1-ei;i>=0;i--)
-        {
-            add=add+str.charAt(i);   
-        }
-        add=add.trim();
-         result=str.substring(0,str.length()-1-ei)+str.substring(ei,str.length())+add;
-        }
-    return result;
 }
-}
-        
-    
+
         

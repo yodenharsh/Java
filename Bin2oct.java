@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Bin2oct {
-  public static void main() {
+  public static void main(String args[]) {
     int binary;
     int rem;
     int decimal = 0;

@@ -9,7 +9,7 @@ public class Q3_2018
         Scanner sc = new Scanner(System.in);
         String ar[];
         int n, i, j;
-        System.out.println("Enter the number of names: ");
+        System.out.println("Enter the number of names(+1): ");
         n = sc.nextInt();
         ar = new String[n];
         System.out.println("Enter the names: ");
@@ -29,9 +29,7 @@ public class Q3_2018
         {
             for(j=0;j<n;j++)
             {
-                /*character will be extracted only when i has a value less
-                 * than the length of the string else only tabular space will be printed
-                 */ 
+                
                 if(i<ar[j].length())
                     System.out.print(ar[j].charAt(i)+"\t");
                 else

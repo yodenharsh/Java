@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class OctalToHexa
 {
-    public static void main()
+    public static void main(String args[])
     {
         int oct, dec=0, i=0, t;
         Scanner sc = new Scanner(System.in);		

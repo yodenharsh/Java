@@ -2,7 +2,7 @@ package Journal_programs;
 import java.util.*;
 class Q3_2020
 {
-public static void main(String rags[])
+public static void main()
 {
     String x="",x1="";
     int s=0,p=0,h=0,w=0,m=0;

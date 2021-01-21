@@ -24,7 +24,7 @@ public class Q1_2018
                System.out.println(ok + " has "+ vowels+ " vowels ");
          }
     }
-    public static void main()
+    public static void main(String []args)
     {
         Q1_2018 obj=new Q1_2018();
         obj.input();
